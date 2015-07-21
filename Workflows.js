@@ -97,7 +97,10 @@ var Workflows = {
         ],
         resolve: {
           alias: {
-            REACT_ENTRYPOINT: packageJsonData.react.entrypoint,
+            REACT_ENTRYPOINT: path.join(
+              packageRoot,
+              packageJsonData.react.entrypoint
+            ),
           },
           extensions: ['', '.js', '.jsx'],
         },
