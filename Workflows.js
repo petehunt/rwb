@@ -108,16 +108,17 @@ var Workflows = {
           loaders: [
             {
               test: /\.jsx?$/,
-              loaders: ['react-hot-loader', 'babel-loader'].map(require.resolve),
+              loader: 'react-hot-loader!babel-loader',
               include: packageRoot,
             },
             {
               test: /\.css$/,
-              loaders: ['style-loader', 'css-loader', 'autoprefixer-loader'].map(require.resolve)
+              loader: 'style-loader!css-loader!autoprefixer-loader',
             },
             {
               test: /\.(png|jpg|svg)$/,
-              loaders: require.resolve('url-loader') + '?limit=8192'},
+              loader: 'url-loader?limit=8192'
+            },
           ]
         },
       };
