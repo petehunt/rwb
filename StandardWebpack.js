@@ -32,12 +32,6 @@ var StandardWebpack = {
     });
   },
 
-  create: function() {
-    // create and validate a minimal webpack config
-    return {
-    };
-  },
-
   shim: function() {
     require('babel/register');
     REQUIRED_EXTENSIONS.forEach(function(extension) {

@@ -3,7 +3,6 @@
 var StandardWebpack = require('./StandardWebpack');
 var WebpackDevServer = require('webpack-dev-server');
 
-var assign = require('object-assign');
 var fs = require('fs');
 var ncp = require('ncp');
 var path = require('path');
@@ -107,8 +106,13 @@ var Workflows = {
         module: {
           loaders: [
             {
-              test: /\.jsx?$/,
+              test: /\.jsx$/,
               loader: 'react-hot-loader!babel-loader',
+              include: packageRoot,
+            },
+            {
+              test: /\.js$/,
+              loader: 'react-hot-loader',
               include: packageRoot,
             },
             {
@@ -122,6 +126,8 @@ var Workflows = {
           ]
         },
       };
+
+      StandardWebpack.validate(config);
 
       new WebpackDevServer(webpack(config), {
         contentBase: dirPath,

@@ -17,7 +17,6 @@
     "invariant": "^2.1.0",
     "ncp": "^2.0.0",
     "node-libs-browser": "^0.5.2",
-    "object-assign": "^3.0.0",
     "react": "^0.13.3",
     "react-hot-loader": "^1.2.8",
     "style-loader": "^0.12.3",
