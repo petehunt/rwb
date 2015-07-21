@@ -2,7 +2,7 @@
 
 var invariant = require('invariant');
 
-var REQUIRED_EXTENSIONS = ['css', 'jpg', 'png', 'svg'];
+var REQUIRED_EXTENSIONS = ['css', 'jpg', 'png', 'svg', 'jsx'];
 
 function doesLoaderMatch(loaders, extension) {
   for (var i = 0; i < loaders.length; i++) {
@@ -39,9 +39,12 @@ var StandardWebpack = {
       output: {
         filename: 'admin.js'
       },
+      resolve: {
+        extensions: ['', '.js', '.jsx'],
+      },
       module: {
         loaders: [
-          { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
+          { test: /\.jsx$/, exclude: /node_modules/, loader: 'babel-loader'},
           { test: /\.css$/, loader: 'style-loader!css-loader!autoprefixer-loader' },
           { test: /\.(png|jpg|svg)$/, loader: 'url-loader?limit=8192'},
         ]
