@@ -5,7 +5,7 @@ var ncp = require('ncp');
 var path = require('path');
 
 var Workflows = {
-  init: function(cb) {
+  init: function() {
     var packageJson = path.join(process.cwd(), 'package.json');
 
     if (!fs.existsSync(packageJson)) {
@@ -30,11 +30,9 @@ var Workflows = {
     ncp(path.join(__dirname, 'template'), process.cwd(), function(err) {
       if (err) {
         console.error('There was an error copying the project template: ' + err);
-        cb(err);
         return;
       }
       console.log('Project created. Don\'t forget to run `npm install`, since some dependencies may have changed.');
-      cb();
     });
   },
 };
