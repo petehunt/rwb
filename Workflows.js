@@ -49,7 +49,8 @@ var Workflows = {
   },
 
   serve: function(args) {
-    var packageRoot = args[0] || process.cwd();
+    args[0] = args[0] || '.';
+    var packageRoot = path.resolve(args[0]);
     var packageJson = path.join(packageRoot, 'package.json');
 
     if (!fs.existsSync(packageJson)) {
