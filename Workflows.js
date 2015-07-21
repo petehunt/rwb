@@ -182,12 +182,17 @@ var Workflows = {
       process.exit(1);
     }
 
-    fs.writeFileSync(
-      path.join(dirPath, 'index.html'),
-      fs.readFileSync(
-        path.join(__dirname, 'index.html')
-      )
-    );
+    var indexPath = path.join(dirPath, 'index.html');
+
+    // If people want a custom index.html, don't overwrite it.
+    if (!fs.existsSync(indexPath)) {
+      fs.writeFileSync(
+        indexPath,
+        fs.readFileSync(
+          path.join(__dirname, 'index.html')
+        )
+      );
+    }
 
     var webpackEntryPath = path.join(__dirname, 'entrypoint.js');
 
