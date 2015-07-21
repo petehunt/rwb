@@ -1,5 +1,6 @@
 'use strict';
 
+var React = require('react');
 var StandardWebpack = require('./StandardWebpack');
 var WebpackDevServer = require('webpack-dev-server');
 
@@ -182,17 +183,25 @@ var Workflows = {
       process.exit(1);
     }
 
+    var reactEntrypoint = path.join(
+      packageRoot,
+      packageJsonData.react.entrypoint
+    );
+
     var indexPath = path.join(dirPath, 'index.html');
 
-    // If people want a custom index.html, don't overwrite it.
-    if (!fs.existsSync(indexPath)) {
-      fs.writeFileSync(
-        indexPath,
-        fs.readFileSync(
-          path.join(__dirname, 'index.html')
-        )
-      );
-    }
+    // Server render the component
+    StandardWebpack.shim();
+    var component = require(reactEntrypoint);
+    var markup = React.renderToString(React.createElement(component));
+    fs.writeFileSync(
+      indexPath,
+      fs.readFileSync(
+        path.join(__dirname, 'index.html'),
+        {encoding: 'utf8'}
+      ).replace('<!-- REACT-CLI MARKUP -->', markup),
+      {encoding: 'utf8'}
+    );
 
     var webpackEntryPath = path.join(__dirname, 'entrypoint.js');
 
@@ -204,10 +213,7 @@ var Workflows = {
       },
       resolve: {
         alias: {
-          REACT_ENTRYPOINT: path.join(
-            packageRoot,
-            packageJsonData.react.entrypoint
-          ),
+          REACT_ENTRYPOINT: reactEntrypoint,
         },
         extensions: ['', '.js', '.jsx'],
       },

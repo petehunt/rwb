@@ -35,7 +35,8 @@ var StandardWebpack = {
   shim: function() {
     require('babel/register');
     REQUIRED_EXTENSIONS.forEach(function(extension) {
-      require.extensions['.' + extension] = noopRequire;
+      var key = '.' + extension;
+      require.extensions[key] = require.extensions[key] || noopRequire;
     });
   },
 };
