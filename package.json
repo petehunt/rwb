@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel": "^5.8.3",
     "ncp": "^2.0.0",
     "yargs": "^3.15.0"
   }

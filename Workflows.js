@@ -1,10 +1,11 @@
 'use strict';
 
 var fs = require('fs');
+var ncp = require('ncp');
 var path = require('path');
 
 var Workflows = {
-  init: function() {
+  init: function(cb) {
     var packageJson = path.join(process.cwd(), 'package.json');
 
     if (!fs.existsSync(packageJson)) {
@@ -19,6 +20,8 @@ var Workflows = {
     packageJsonData.react.entrypoint = packageJsonData.react.entrypoint || './MyComponent.jsx';
 
     fs.writeFileSync(packageJson, JSON.stringify(packageJsonData, undefined, 2), {encoding: 'utf8'});
+
+    ncp(path.join(__dirname, 'template'), process.cwd(), cb);
   },
 };
 
