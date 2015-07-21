@@ -77,22 +77,7 @@ var Workflows = {
         )
       );
 
-      var webpackEntryPath = path.join(dirPath, 'entrypoint.js');
-
-      fs.writeFileSync(
-        webpackEntryPath,
-        fs.readFileSync(
-          path.join(__dirname, 'entrypoint.js'),
-          {encoding: 'utf8'}
-        ).replace(
-          '{{ entrypoint }}', // TODO: resolve.alias?
-          JSON.stringify(path.join(
-            packageRoot,
-            packageJsonData.react.entrypoint
-          ))
-        ),
-        {encoding: 'utf8'}
-      );
+      var webpackEntryPath = path.join(__dirname, 'entrypoint.js');
 
       var config = {
         devtool: 'eval',
@@ -111,6 +96,9 @@ var Workflows = {
           new webpack.NoErrorsPlugin()
         ],
         resolve: {
+          alias: {
+            REACT_ENTRYPOINT: packageJsonData.react.entrypoint,
+          },
           extensions: ['', '.js', '.jsx'],
         },
         module: {

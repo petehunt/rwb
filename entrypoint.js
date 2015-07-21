@@ -1,6 +1,6 @@
 'use strict';
 
-var ComponentEntrypoint = require({{ entrypoint }});
+var ComponentEntrypoint = require('REACT_ENTRYPOINT');
 var React = require('react');
 
 React.render(
