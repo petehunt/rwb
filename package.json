@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "babel": "^5.8.3",
+    "invariant": "^2.1.0",
     "ncp": "^2.0.0",
     "yargs": "^3.15.0"
   }
