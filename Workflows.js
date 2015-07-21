@@ -209,7 +209,7 @@ var Workflows = {
       entry: webpackEntryPath,
       output: {
         path: dirPath,
-        filename: 'bundle.js',
+        filename: 'bundle.js', // TODO: use [hash]
       },
       resolve: {
         alias: {
@@ -217,6 +217,13 @@ var Workflows = {
         },
         extensions: ['', '.js', '.jsx'],
       },
+      plugins: [
+        new webpack.DefinePlugin({
+          'process.env.NODE_ENV': JSON.stringify('production'),
+        }),
+        new webpack.optimize.UglifyJsPlugin(),
+        new webpack.optimize.OccurenceOrderPlugin(),
+      ],
       module: {
         loaders: [
           {
