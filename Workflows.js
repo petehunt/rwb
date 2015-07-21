@@ -89,7 +89,6 @@ var Workflows = {
         output: {
           path: dirPath,
           filename: 'bundle.js',
-          publicPath: '/static/'
         },
         plugins: [
           new webpack.HotModuleReplacementPlugin(),
@@ -152,6 +151,90 @@ var Workflows = {
       process.exit(1);
     }
     StandardWebpack.validate(require(path.resolve(args[0])));
+  },
+
+  static: function(args) {
+    args[0] = args[0] || '.';
+    var packageRoot = path.resolve(args[0]);
+    var packageJson = path.join(packageRoot, 'package.json');
+
+    if (!fs.existsSync(packageJson)) {
+      console.error(packageJson + ' does not exist.');
+      process.exit(1);
+    }
+
+    var dirPath = args[1];
+    if (!dirPath) {
+      console.error('You must provide a destination directory.');
+      process.exit(1);
+    }
+
+    if (!fs.existsSync(dirPath)) {
+      fs.mkdirSync(dirPath);
+    }
+
+    var packageJsonData = require(packageJson);
+
+    if (!packageJsonData.react || !packageJsonData.react.entrypoint) {
+      console.error(
+        'react.entrypoint key does not exist in: ' + packageJson + '. Did you forget to run `react-cli init`?'
+      );
+      process.exit(1);
+    }
+
+    fs.writeFileSync(
+      path.join(dirPath, 'index.html'),
+      fs.readFileSync(
+        path.join(__dirname, 'index.html')
+      )
+    );
+
+    var webpackEntryPath = path.join(__dirname, 'entrypoint.js');
+
+    var config = {
+      entry: webpackEntryPath,
+      output: {
+        path: dirPath,
+        filename: 'bundle.js',
+      },
+      resolve: {
+        alias: {
+          REACT_ENTRYPOINT: path.join(
+            packageRoot,
+            packageJsonData.react.entrypoint
+          ),
+        },
+        extensions: ['', '.js', '.jsx'],
+      },
+      module: {
+        loaders: [
+          {
+            test: /\.jsx$/,
+            loader: 'react-hot-loader!babel-loader',
+            include: packageRoot,
+          },
+          {
+            test: /\.js$/,
+            loader: 'react-hot-loader',
+            include: packageRoot,
+          },
+          {
+            test: /\.css$/,
+            loader: 'style-loader!css-loader!autoprefixer-loader',
+          },
+          {
+            test: /\.(png|jpg|svg)$/,
+            loader: 'url-loader?limit=8192'
+          },
+        ]
+      },
+    };
+
+    StandardWebpack.validate(config);
+    webpack(config).run(function(err, stats) {
+      errGuard(err);
+      console.log(stats.toString());
+    });
   },
 };
 
