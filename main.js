@@ -15,4 +15,4 @@ invariant(
   Object.keys(Workflows).join(', ')
 );
 
-Workflows[command]();
+Workflows[command](argv._.slice(1));

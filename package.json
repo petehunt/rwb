@@ -9,9 +9,21 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer-loader": "^2.0.0",
     "babel": "^5.8.3",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.15.5",
+    "file-loader": "^0.8.4",
     "invariant": "^2.1.0",
     "ncp": "^2.0.0",
+    "node-libs-browser": "^0.5.2",
+    "object-assign": "^3.0.0",
+    "react-hot-loader": "^1.2.8",
+    "style-loader": "^0.12.3",
+    "temp": "^0.8.3",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.10.1",
+    "webpack-dev-server": "^1.10.1",
     "yargs": "^3.15.0"
   }
 }

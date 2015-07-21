@@ -32,23 +32,9 @@ var StandardWebpack = {
     });
   },
 
-  create: function(entry) {
+  create: function() {
     // create and validate a minimal webpack config
     return {
-      entry: entry,
-      output: {
-        filename: 'admin.js'
-      },
-      resolve: {
-        extensions: ['', '.js', '.jsx'],
-      },
-      module: {
-        loaders: [
-          { test: /\.jsx$/, exclude: /node_modules/, loader: 'babel-loader'},
-          { test: /\.css$/, loader: 'style-loader!css-loader!autoprefixer-loader' },
-          { test: /\.(png|jpg|svg)$/, loader: 'url-loader?limit=8192'},
-        ]
-      },
     };
   },
 
