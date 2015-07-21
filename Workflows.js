@@ -140,6 +140,18 @@ var Workflows = {
       });
     });
   },
+
+  validate: function(args) {
+    if (!args[0]) {
+      console.error('You must pass a path to a webpack config module');
+      process.exit(1);
+    }
+    if (!fs.existsSync(args[0])) {
+      console.error(args[0] + ' does not exist.');
+      process.exit(1);
+    }
+    StandardWebpack.validate(require(path.resolve(args[0])));
+  },
 };
 
 module.exports = Workflows;

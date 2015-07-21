@@ -20,8 +20,8 @@ function noopRequire(module, filename) {
 var StandardWebpack = {
   validate: function(webpackConfig) {
     // throw an exception if the correct loader extensions aren't configured
-    invariant(webpackConfig.hasOwnProperty('module'), 'webpackConfig is mising a module field');
-    invariant(Array.isArray(webpackConfig.module.loaders), 'module.loaders is not an array');
+    invariant(webpackConfig.hasOwnProperty('module'), 'Mising `module` field');
+    invariant(Array.isArray(webpackConfig.module.loaders), '`module.loaders` is not an array');
     REQUIRED_EXTENSIONS.forEach(function(extension) {
       var loaders = webpackConfig.module.loaders;
       invariant(
