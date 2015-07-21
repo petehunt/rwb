@@ -124,12 +124,13 @@ var Workflows = {
       };
 
       new WebpackDevServer(webpack(config), {
+        contentBase: dirPath,
         publicPath: config.output.publicPath,
         hot: true,
         historyApiFallback: true
       }).listen(3000, 'localhost', function (err, result) {
         errGuard(err);
-        console.log('Listening at localhost:3000');
+        console.log('Serving ' + dirPath + ' at localhost:3000');
       });
     });
   },
