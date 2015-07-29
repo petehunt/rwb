@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
+  "bin": {
     "react-cli": "./main"
   },
   "author": "",
