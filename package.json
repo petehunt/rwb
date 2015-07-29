@@ -25,5 +25,7 @@
     "webpack": "^1.10.1",
     "webpack-dev-server": "^1.10.1",
     "yargs": "^3.15.0"
-  }
+  },
+  "preferGlobal": true,
+  "files": ["."]
 }
