@@ -27,5 +27,5 @@
     "yargs": "^3.15.0"
   },
   "preferGlobal": true,
-  "files": ["."]
+  "files": ["./"]
 }
