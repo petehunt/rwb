@@ -2,9 +2,9 @@
   "name": "react-cli",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/main",
   "bin": {
-    "react-cli": "./main"
+    "react-cli": "./lib/main.js"
   },
   "author": "",
   "license": "ISC",
@@ -27,5 +27,5 @@
     "yargs": "^3.15.0"
   },
   "preferGlobal": true,
-  "files": ["./"]
+  "files": ["lib"]
 }
