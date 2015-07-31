@@ -13,6 +13,7 @@
     "babel": "^5.8.3",
     "babel-loader": "^5.3.2",
     "css-loader": "^0.15.5",
+    "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
     "invariant": "^2.1.0",
     "ncp": "^2.0.0",
