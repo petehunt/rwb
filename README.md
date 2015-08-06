@@ -54,6 +54,7 @@ If you have a dynamic server-rendered web app with lots of routing, you can use 
   * Did we pick the right loaders?
   * Is this going to fragment the npm community? (yes, but that's the price of progress, and we should try to minimize this as much as possible)
   * When `react-router` 1.0 comes out, we should support lazy-loading the route config itself to reduce cache busting.
+  * The server rendering code is very questionable. We should use something like `enhanced-require`.
 
 ## FAQ
 
