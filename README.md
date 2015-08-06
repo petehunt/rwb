@@ -18,7 +18,9 @@ React-CLI has two goals.
 
 This is a lofty goal.
 
-It's hard to share components in `npm` because there's no standard way to include assets like images, fonts, and CSS. If you build a component with `react-cli` you can assume that loaders are configured for CSS and images. If you want to use a `react-cli`-authored component in your existing app, run `react-cli validate ./path/to/webpack.config.js` to validate that your webpack config has all the loaders that `react-cli` assumes are there.
+  * It's hard to share components in `npm` because there's no standard way to include assets like images, fonts, and CSS.
+  * If you build a component with `react-cli` you can assume that loaders are configured for CSS and images.
+  * If you want to use a `react-cli`-authored component in your existing app, run `react-cli validate ./path/to/webpack.config.js` to validate that your webpack config has all the loaders that `react-cli` assumes are there.
 
 The great developer experience of `react-cli` is a trojan horse designed to increase adoption of this "standard".
 
@@ -38,6 +40,21 @@ react-cli serve
 react-cli static build/
 ```
 
-This will build a static site for you in `build/`.
+This will build a static site for you in `build/`, complete with pre-rendered static markup.
 
 If you have a dynamic server-rendered web app with lots of routing, you can use the generated `serverConfig.json` file to choose which JS and CSS files should be included for each route.
+
+## Key insights
+
+  * webpack needs to know the structure of your routes in order to know which entrypoints to create. There should be one entrypoint per route.
+  * Removing codegen is a big productivity boost and makes generating one entrypoint per route a lot easier.
+
+## Open issues
+
+  * Did we pick the right loaders?
+  * Is this going to fragment the npm community? (yes, but that's the price of progress, and we should try to minimize this as much as possible)
+  * When `react-router` 1.0 comes out, we should support lazy-loading the route config itself to reduce cache busting.
+
+## FAQ
+
+  * **It's not modular and the code sucks.** Yep, this was hacked out over the course of a few days on Caltrain, but the design is sane
