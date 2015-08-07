@@ -13,11 +13,13 @@
     "babel": "^5.8.3",
     "babel-loader": "^5.3.2",
     "bundle-loader": "^0.5.2",
+    "contextify": "^0.1.14",
     "css-loader": "^0.15.5",
     "enhanced-require": "^0.5.0-beta6",
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
     "invariant": "^2.1.0",
+    "memory-fs": "^0.2.0",
     "ncp": "^2.0.0",
     "node-libs-browser": "^0.5.2",
     "object-assign": "^3.0.0",
@@ -31,7 +33,7 @@
     "url-loader": "^0.5.6",
     "webpack": "^1.10.5",
     "webpack-dev-server": "^1.10.1",
-    "yargs": "^3.15.0"
+    "yargs": "^3.17.1"
   },
   "preferGlobal": true,
   "files": [
