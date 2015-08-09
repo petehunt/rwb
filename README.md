@@ -33,6 +33,14 @@ react-cli init
 react-cli serve
 ```
 
+## Build a static site
+
+```
+react-cli static
+```
+
+This will create `dist/index.html`, `dist/bundle.js` and `dist/styles.css`. These files are optimized and suitable for production, though if you have a large, complicated single-page app you'll want to roll your own multi-bundle setup (`react-cli` will solve this soon).
+
 ## Going to production
 
 When you go to production you'll have your own webpack config. `react-cli validate` will ensure that your config will work with components created with `react-cli`.
