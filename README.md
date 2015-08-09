@@ -33,6 +33,8 @@ react-cli init
 react-cli serve
 ```
 
+You can change the port by setting the REACT_CLI_PORT environment variable: `REACT_CLI_PORT=3001 react-cli serve`
+
 ## Build a static site
 
 ```
