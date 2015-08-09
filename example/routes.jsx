@@ -1,12 +1,7 @@
 'use strict';
 
+var MyComponent = require('./MyComponent');
 var React = require('react');
-var {DefaultRoute, Route} = require('react-router');
+var {Route} = require('react-router');
 
-module.exports = (
-  <Route>
-    <DefaultRoute asyncHandler="./MyComponent" />
-    <Route path="/one" asyncHandler="./MyComponent" />
-    <Route path="/two" asyncHandler="./MyOtherComponent" />
-  </Route>
-);
+module.exports = <Route handler={MyComponent} />;

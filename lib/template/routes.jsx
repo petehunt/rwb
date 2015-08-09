@@ -1,6 +1,7 @@
 'use strict';
 
+var MyComponent = require('./MyComponent');
 var React = require('react');
 var {Route} = require('react-router');
 
-module.exports = <Route asyncHandler="./MyComponent" />;
+module.exports = <Route handler={MyComponent} />;
