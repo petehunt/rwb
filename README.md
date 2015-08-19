@@ -26,6 +26,7 @@ The great developer experience of `react-cli` is a trojan horse designed to incr
 ## How to develop
 
 ```
+npm install -g git+https://github.com/petehunt/react-cli
 mkdir myapp
 cd myapp
 npm init
