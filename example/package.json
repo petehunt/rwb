@@ -18,6 +18,7 @@
     "react"
   ],
   "react": {
-    "routes": "./routes.jsx"
+    "routes": "./routes.js",
+    "rwb": "0.0.1"
   }
 }
