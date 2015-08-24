@@ -1,10 +1,10 @@
 {
-  "name": "react-cli",
+  "name": "rwb",
   "version": "0.0.1",
   "description": "",
   "main": "./lib/main",
   "bin": {
-    "react-cli": "./lib/main.js"
+    "rwb": "./lib/main.js"
   },
   "author": "",
   "license": "ISC",
