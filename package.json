@@ -2,7 +2,7 @@
   "name": "rwb",
   "version": "0.0.9",
   "description": "",
-  "main": "./lib/main",
+  "main": "./lib/index.js",
   "bin": {
     "rwb": "./lib/main.js"
   },
