@@ -1,4 +1,4 @@
-.MyComponent {
+:local(.MyComponent) {
   color: blue;
   font-family: sans-serif;
 }
