@@ -15,6 +15,7 @@
     "extract-text-webpack-plugin": "0.8.2",
     "file-loader": "0.8.4",
     "invariant": "2.1.0",
+    "json-loader": "^0.5.3",
     "ncp": "2.0.0",
     "node-libs-browser": "0.5.2",
     "open": "0.0.5",
