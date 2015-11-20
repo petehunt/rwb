@@ -1,24 +1,26 @@
 {
   "name": "example",
   "version": "1.0.0",
-  "description": "",
+  "description": "rwb demotron",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "react": "^0.13.3"
-  },
-  "devDependencies": {
-    "react-router": "^0.13.3"
-  },
   "keywords": [
     "react"
   ],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "react": "^0.14.3"
+  },
+  "devDependencies": {
+    "react-router": "^1.0.2",
+    "history": "^1.17.0"
+  },
   "react": {
     "routes": "./routes.js",
-    "rwb": "0.0.1"
+    "rwb": "0.0.16"
   }
 }
