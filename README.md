@@ -32,6 +32,8 @@ rwb init
 rwb serve
 ```
 
+Optionally, you may set `react.api`, in your `package.json`, to a URL used when forwarding `json` API requests.
+
 You can change the port by setting the RWB_PORT environment variable: `RWB_PORT=3001 rwb serve`
 
 ## Build a static site
