@@ -29,7 +29,6 @@
     "css-loader": "0.23.1",
     "extract-text-webpack-plugin": "0.9.1",
     "file-loader": "0.8.5",
-    "fs-extra": "^0.26.3",
     "invariant": "2.2.0",
     "json-loader": "0.5.4",
     "ncp": "2.0.0",
