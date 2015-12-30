@@ -9,10 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^0.13.3"
+    "react": "^0.14.0"
   },
   "devDependencies": {
-    "react-router": "^0.13.3"
+    "react-router": "^2.0.0"
   },
   "keywords": [
     "react"

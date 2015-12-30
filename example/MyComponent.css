@@ -1,9 +1,4 @@
-.text {
-  text-decoration: underline;
-}
-
 .MyComponent {
-  composes: text;
   color: blue;
   font-family: sans-serif;
 }
