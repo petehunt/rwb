@@ -24,6 +24,7 @@ task :reset_example do
       abort 'Unable to read package.json :('
     end
 
+    pkg['main'] = 'MyComponent.js'
     pkg['description'] = 'rwb demotron'
     # Silence 'no repository' warning
     pkg['private'] = true
@@ -44,6 +45,6 @@ task :reset_example do
   puts 'Done!'
 
   print 'Generating static site... '
-  `rwb static 2>&1 >/dev/null`
+  `rwb static`
   puts 'Done!'
 end

@@ -1,4 +1,5 @@
 :local(.MyComponent) {
   color: blue;
+  font-size: 30px;
   font-family: sans-serif;
 }
