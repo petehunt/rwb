@@ -2,7 +2,7 @@
   "name": "example",
   "version": "1.0.0",
   "description": "rwb demotron",
-  "main": "MyComponent.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,16 +11,17 @@
   ],
   "author": "",
   "license": "ISC",
-  "private": true,
   "dependencies": {
-    "react": "^0.14.3",
+    "react": "^0.14.5",
     "react-dom": "^0.14.5"
   },
   "devDependencies": {
     "rwb": "0.0.16"
   },
   "rwb": {
-    "entrypoint": "./entrypoint.js",
+    "dom_node": "#.rwb-demotron",
+    "main": "MyComponent.js",
     "static_generator": "./render-static-page.js"
-  }
+  },
+  "private": true
 }

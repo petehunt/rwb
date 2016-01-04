@@ -29,4 +29,4 @@ const MyComponent = React.createClass({
   }
 });
 
-export default MyComponent;
+export default <MyComponent />;
