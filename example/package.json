@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^0.14.5",
-    "react-dom": "^0.14.5"
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6"
   },
   "devDependencies": {
     "rwb": "0.0.16"
