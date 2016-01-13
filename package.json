@@ -20,7 +20,7 @@
   "author": "Pete Hunt",
   "license": "ISC",
   "dependencies": {
-    "autoprefixer-loader": "3.1.0",
+    "autoprefixer": "^6.2.3",
     "babel-core": "^6.4.0",
     "babel-loader": "^6.2.1",
     "babel-plugin-transform-object-rest-spread": "^6.3.13",
@@ -34,6 +34,7 @@
     "ncp": "2.0.0",
     "node-libs-browser": "0.5.3",
     "open": "0.0.5",
+    "postcss-loader": "^0.8.0",
     "raw-loader": "^0.5.1",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
@@ -42,8 +43,8 @@
     "svgo-loader": "^1.1.0",
     "temp": "0.8.3",
     "url-loader": "0.5.7",
-    "webpack": "1.12.10",
-    "webpack-dev-server": "1.14.0",
+    "webpack": "1.12.11",
+    "webpack-dev-server": "1.14.1",
     "webpack-require": "0.0.16",
     "yargs": "3.31.0"
   },
