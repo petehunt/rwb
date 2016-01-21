@@ -4,21 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "react": "^0.13.3"
-  },
-  "devDependencies": {
-    "react-router": "^0.13.3"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "rwb serve"
   },
   "keywords": [
     "react"
   ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "0.13.3"
+  },
+  "devDependencies": {
+    "react-router": "0.13.3"
+  },
   "react": {
     "routes": "./routes.js",
-    "rwb": "0.0.1"
+    "rwb": "0.0.16"
   }
 }
