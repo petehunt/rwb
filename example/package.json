@@ -20,7 +20,7 @@
   },
   "rwb": {
     "dom_node": "#.rwb-demotron",
-    "main": "MyComponent.js",
+    "main": "./main.js",
     "static_generator": "./render-static-page.js"
   },
   "private": true
