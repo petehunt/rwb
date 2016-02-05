@@ -1,5 +1,6 @@
+'use strict';
+
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ReactDOMServer from 'react-dom/server';
 import Root from '__rwb_root__';
 
@@ -12,6 +13,7 @@ export default function() {
     '<!doctype html>' + ReactDOMServer.renderToStaticMarkup(
       <html>
         <head>
+          <meta charSet="utf-8" />
           <title>MyComponent</title>
           {RWB.ASSETS.css.map((a, idx) => <link key={idx} rel="stylesheet" href={a} />)}
         </head>
@@ -28,4 +30,4 @@ export default function() {
     ),
     {encoding: 'utf8'}
   );
-};
+}
