@@ -18,6 +18,7 @@
     "react"
   ],
   "react": {
+    "title": "rwb generated application",
     "routes": "./routes.js",
     "rwb": "0.0.1"
   }
