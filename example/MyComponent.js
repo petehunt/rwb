@@ -7,7 +7,7 @@ var styles = require('./MyComponent.css');
 var MyComponent = React.createClass({
   render: function() {
     return (
-      <div className={styles.MyComponent}>Hello, world!</div>
+      <div className="MyComponent">Hello, world!</div>
     );
   },
 });
