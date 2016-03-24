@@ -9,16 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^0.14.7"
   },
   "devDependencies": {
-    "react-router": "^0.13.5"
   },
   "keywords": [
     "react"
   ],
   "react": {
-    "routes": "./routes.js",
+    "main": "./main.js",
     "rwb": "0.0.1"
   }
 }
