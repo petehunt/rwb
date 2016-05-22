@@ -2,9 +2,10 @@ require 'json'
 require 'fileutils'
 require 'webrick'
 require 'benchmark'
+require 'shellwords'
 
 PWD = File.dirname(__FILE__)
-RWB = File.expand_path('./lib/main.js', PWD)
+RWB = File.expand_path('./lib/main.js', PWD).shellescape
 EXAMPLE_DIR = File.expand_path('./example', PWD)
 SERVER_PORT = 8000
 
