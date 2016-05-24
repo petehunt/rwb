@@ -33,7 +33,6 @@
     "invariant": "2.2.1",
     "json-loader": "^0.5.4",
     "ncp": "2.0.0",
-    "open": "0.0.5",
     "postcss-loader": "^0.9.1",
     "raw-loader": "^0.5.1",
     "react": "^15.1.0",
