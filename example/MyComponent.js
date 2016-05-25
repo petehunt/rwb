@@ -1,5 +1,4 @@
 'use strict';
-/* eslint-env browser, es6 */
 
 const React = require('react');
 
