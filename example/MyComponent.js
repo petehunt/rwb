@@ -1,13 +1,30 @@
 'use strict';
 
-var React = require('react');
+const React = require('react');
 
-var styles = require('./MyComponent.css');
+const styles = require('./MyComponent.css');
 
-var MyComponent = React.createClass({
-  render: function() {
+const MyComponent = React.createClass({
+  getInitialState() {
+    return {timesClicked: 0};
+  },
+
+  handleClick() {
+    this.setState({timesClicked: this.state.timesClicked + 1});
+  },
+
+  render(){
+    const colors = [
+      'red', 'green', 'blue', 'violet',
+    ];
+
     return (
-      <div className="MyComponent">Hello, world!</div>
+      <button
+        style={{
+          color: colors[this.state.timesClicked % colors.length],
+        }}
+        onClick={this.handleClick}
+        className={styles.MyComponent}>Hello, world!</button>
     );
   },
 });

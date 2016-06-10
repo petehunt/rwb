@@ -23,7 +23,7 @@ The great developer experience of `rwb` is a trojan horse designed to increase a
 
 ## How to develop
 
-```
+```bash
 npm install -g git+https://github.com/petehunt/rwb
 mkdir myapp
 cd myapp
@@ -36,7 +36,7 @@ You can change the port by setting the RWB_PORT environment variable: `RWB_PORT=
 
 ## Build a static site
 
-```
+```bash
 rwb static
 ```
 
@@ -46,7 +46,7 @@ This will create `dist/index.html`, `dist/bundle.js` and `dist/styles.css`. Thes
 
 When you go to production you'll have your own webpack config. `rwb validate` will ensure that your config will work with components created with `rwb`.
 
-```
+```bash
 rwb validate ./path/to/webpack.config.js
 ```
 
