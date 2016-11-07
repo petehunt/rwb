@@ -34,14 +34,6 @@ rwb serve
 
 You can change the port by setting the RWB_PORT environment variable: `RWB_PORT=3001 rwb serve`
 
-## Build a static site
-
-```
-rwb static
-```
-
-This will create `dist/index.html`, `dist/bundle.js` and `dist/styles.css`. These files are optimized and suitable for production, though if you have a large, complicated single-page app you'll want to roll your own multi-bundle setup (`rwb` will solve this soon).
-
 ## Going to production
 
 When you go to production you'll have your own webpack config. `rwb validate` will ensure that your config will work with components created with `rwb`.
