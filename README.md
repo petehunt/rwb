@@ -24,7 +24,7 @@ The great developer experience of `rwb` is a trojan horse designed to increase a
 ## How to develop
 
 ```
-npm install -g git+https://github.com/petehunt/rwb
+npm install -g rwb
 mkdir myapp
 cd myapp
 npm init
